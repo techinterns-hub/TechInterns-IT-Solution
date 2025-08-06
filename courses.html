@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses - TechInterns IT Solutions</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/enhanced-style.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-code me-2"></i>
+                <span class="brand-text">TechInterns</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Toggle navigation" title="Toggle navigation menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="courses.html">Courses</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="internships.html">Internships</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h1 class="page-title">Our Courses</h1>
+                    <p class="page-subtitle">Master cutting-edge technologies with our comprehensive course catalog</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Course Categories -->
+    <section class="course-categories py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center mb-5">
+                    <h2 class="section-title">Choose Your Learning Path</h2>
+                    <p class="section-subtitle">From beginner to advanced, we have courses for every skill level</p>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-12">
+                    <div class="course-filter-tabs">
+                        <button class="filter-btn active" data-filter="all" aria-label="Show all courses">All Courses</button>
+                        <button class="filter-btn" data-filter="development" aria-label="Show development courses">Development</button>
+                        <button class="filter-btn" data-filter="design" aria-label="Show design courses">Design</button>
+                        <button class="filter-btn" data-filter="marketing" aria-label="Show marketing courses">Marketing</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Courses Grid -->
+    <section class="courses-grid py-5">
+        <div class="container">
+            <div class="row g-4">
+                <!-- Frontend Development Course -->
+                <div class="col-lg-4 col-md-6 course-item" data-category="development" data-aos="flip-left" data-aos-delay="100">
+                    <div class="course-card">
+                        <div class="course-card-inner">
+                            <div class="course-card-front">
+                                <div class="course-image">
+                                    <img src="https://images.unsplash.com/photo-1627398242454-45a1465c2479?w=400&h=250&fit=crop" alt="Frontend Development">
+                                    <div class="course-overlay">
+                                        <div class="course-icon">
+                                            <i class="fab fa-html5"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="course-content">
+                                    <div class="course-category">Development</div>
+                                    <h3 class="course-title">Frontend Development</h3>
+                                    <p class="course-description">Master HTML, CSS, JavaScript, and React to build stunning user interfaces.</p>
+                                    <div class="course-meta">
+                                        <span class="course-duration"><i class="fas fa-clock"></i> 4 weeks</span>
+                                        <span class="course-level"><i class="fas fa-signal"></i> Beginner</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="course-card-back">
+                                <div class="course-back-content">
+                                    <h3>What You'll Learn</h3>
+                                    <ul class="course-curriculum">
+                                        <li><i class="fas fa-check"></i> HTML5 & CSS3 Fundamentals</li>
+                                        <li><i class="fas fa-check"></i> JavaScript</li>
+                                        <li><i class="fas fa-check"></i> React.js</li>
+                                        <li><i class="fas fa-check"></i> Responsive Design</li>
+                                        <li><i class="fas fa-check"></i> Version Control with Git</li>
+                                    </ul>
+                                    <div class="course-price">Free</div>
+                                    <a href="enroll.html?course=Frontend Development" class="btn btn-primary w-100" aria-label="Enroll in Frontend Development course">Enroll Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Backend Development Course -->
+                <div class="col-lg-4 col-md-6 course-item" data-category="development" data-aos="flip-left" data-aos-delay="200">
+                    <div class="course-card">
+                        <div class="course-card-inner">
+                            <div class="course-card-front">
+                                <div class="course-image">
+                                    <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=400&h=250&fit=crop" alt="Backend Development">
+                                    <div class="course-overlay">
+                                        <div class="course-icon">
+                                            <i class="fab fa-node-js"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="course-content">
+                                    <div class="course-category">Development</div>
+                                    <h3 class="course-title">Backend Development</h3>
+                                    <p class="course-description">Build robust server-side applications with Node.js, Express, and MongoDB.</p>
+                                    <div class="course-meta">
+                                        <span class="course-duration"><i class="fas fa-clock"></i> 4 weeks</span>
+                                        <span class="course-level"><i class="fas fa-signal"></i> Beginner</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="course-card-back">
+                                <div class="course-back-content">
+                                    <h3>What You'll Learn</h3>
+                                    <ul class="course-curriculum">
+                                        <li><i class="fas fa-check"></i> Node.js & Express.js</li>
+                                        <li><i class="fas fa-check"></i> MongoDB</li>
+                                        <li><i class="fas fa-check"></i> RESTful APIs</li>
+                                        <li><i class="fas fa-check"></i> Authentication & Security</li>
+                                        <li><i class="fas fa-check"></i> Cloud Deployment</li>
+                                    </ul>
+                                    <div class="course-price">Free</div>
+                                    <a href="enroll.html?course=Backend Development" class="btn btn-primary w-100" aria-label="Enroll in Backend Development course">Enroll Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Full Stack Development Course -->
+                <div class="col-lg-4 col-md-6 course-item" data-category="development" data-aos="flip-left" data-aos-delay="300">
+                    <div class="course-card">
+                        <div class="course-card-inner">
+                            <div class="course-card-front">
+                                <div class="course-image">
+                                    <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=400&h=250&fit=crop" alt="Full Stack Development">
+                                    <div class="course-overlay">
+                                        <div class="course-icon">
+                                            <i class="fas fa-layer-group"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="course-content">
+                                    <div class="course-category">Development</div>
+                                    <h3 class="course-title">Full Stack Development (Java)</h3>
+                                    <p class="course-description">Complete Java full-stack development with Spring Boot and modern frameworks.</p>
+                                    <div class="course-meta">
+                                        <span class="course-duration"><i class="fas fa-clock"></i> 4 weeks</span>
+                                        <span class="course-level"><i class="fas fa-signal"></i> Beginner</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="course-card-back">
+                                <div class="course-back-content">
+                                    <h3>What You'll Learn</h3>
+                                    <ul class="course-curriculum">
+                                        <li><i class="fas fa-check"></i> Java & Spring Boot</li>
+                                        <li><i class="fas fa-check"></i> Microservices Architecture</li>
+                                        <li><i class="fas fa-check"></i> Database Design</li>
+                                        <li><i class="fas fa-check"></i> Frontend Integration</li>
+                                        <li><i class="fas fa-check"></i> Deployment</li>
+                                    </ul>
+                                    <div class="course-price">Free</div>
+                                    <a href="enroll.html?course=Full Stack Development (Java)" class="btn btn-primary w-100" aria-label="Enroll in Full Stack Development course">Enroll Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- App Development Course -->
+                <div class="col-lg-4 col-md-6 course-item" data-category="development" data-aos="flip-left" data-aos-delay="400">
+                    <div class="course-card">
+                        <div class="course-card-inner">
+                            <div class="course-card-front">
+                                <div class="course-image">
+                                    <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=400&h=250&fit=crop" alt="App Development">
+                                    <div class="course-overlay">
+                                        <div class="course-icon">
+                                            <i class="fas fa-mobile-alt"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="course-content">
+                                    <div class="course-category">Development</div>
+                                    <h3 class="course-title">App Development</h3>
+                                    <p class="course-description">Build cross-platform mobile apps with React Native and Flutter.</p>
+                                    <div class="course-meta">
+                                        <span class="course-duration"><i class="fas fa-clock"></i> 4 weeks</span>
+                                        <span class="course-level"><i class="fas fa-signal"></i> Beginner</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="course-card-back">
+                                <div class="course-back-content">
+                                    <h3>What You'll Learn</h3>
+                                    <ul class="course-curriculum">
+                                        <li><i class="fas fa-check"></i> React Native Fundamentals</li>
+                                        <li><i class="fas fa-check"></i> Flutter </li>
+                                        <li><i class="fas fa-check"></i> Mobile UI/UX Design</li>
+                                        <!--<li><i class="fas fa-check"></i> App Store Deployment</li>-->
+                                        <li><i class="fas fa-check"></i> Push Notifications</li>
+                                    </ul>
+                                    <div class="course-price">Free</div>
+                                    <a href="enroll.html?course=App Development" class="btn btn-primary w-100" aria-label="Enroll in App Development course">Enroll Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Digital Marketing Course -->
+                <div class="col-lg-4 col-md-6 course-item" data-category="marketing" data-aos="flip-left" data-aos-delay="500">
+                    <div class="course-card">
+                        <div class="course-card-inner">
+                            <div class="course-card-front">
+                                <div class="course-image">
+                                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=250&fit=crop" alt="Digital Marketing">
+                                    <div class="course-overlay">
+                                        <div class="course-icon">
+                                            <i class="fas fa-chart-line"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="course-content">
+                                    <div class="course-category">Marketing</div>
+                                    <h3 class="course-title">Digital Marketing</h3>
+                                    <p class="course-description">Master SEO, social media marketing, and digital advertising strategies.</p>
+                                    <div class="course-meta">
+                                        <span class="course-duration"><i class="fas fa-clock"></i> 4 weeks</span>
+                                        <span class="course-level"><i class="fas fa-signal"></i> Beginner</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="course-card-back">
+                                <div class="course-back-content">
+                                    <h3>What You'll Learn</h3>
+                                    <ul class="course-curriculum">
+                                        <li><i class="fas fa-check"></i> SEO & Content Marketing</li>
+                                        <li><i class="fas fa-check"></i> Social Media Strategy</li>
+                                        <li><i class="fas fa-check"></i> Google Ads & Analytics</li>
+                                        <li><i class="fas fa-check"></i> Email Marketing</li>
+                                        <!--<li><i class="fas fa-check"></i> Conversion Optimization</li>-->
+                                    </ul>
+                                    <div class="course-price">Free</div>
+                                    <a href="enroll.html?course=Digital Marketing" class="btn btn-primary w-100" aria-label="Enroll in Digital Marketing course">Enroll Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Responsive Web Design Course -->
+                <div class="col-lg-4 col-md-6 course-item" data-category="design" data-aos="flip-left" data-aos-delay="600">
+                    <div class="course-card">
+                        <div class="course-card-inner">
+                            <div class="course-card-front">
+                                <div class="course-image">
+                                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=250&fit=crop" alt="Responsive Web Design">
+                                    <div class="course-overlay">
+                                        <div class="course-icon">
+                                            <i class="fas fa-paint-brush"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="course-content">
+                                    <div class="course-category">Design</div>
+                                    <h3 class="course-title">Responsive Web Design</h3>
+                                    <p class="course-description">Create beautiful, responsive websites that work on all devices.</p>
+                                    <div class="course-meta">
+                                        <span class="course-duration"><i class="fas fa-clock"></i> 4 weeks</span>
+                                        <span class="course-level"><i class="fas fa-signal"></i> Beginner</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="course-card-back">
+                                <div class="course-back-content">
+                                    <h3>What You'll Learn</h3>
+                                    <ul class="course-curriculum">
+                                        <li><i class="fas fa-check"></i> CSS Grid & Flexbox</li>
+                                        <li><i class="fas fa-check"></i> Mobile-First Design</li>
+                                        <li><i class="fas fa-check"></i> Bootstrap Framework</li>
+                                        <li><i class="fas fa-check"></i> UI/UX Principles</li>
+                                        <li><i class="fas fa-check"></i> Design Tools</li>
+                                    </ul>
+                                    <div class="course-price">Free</div>
+                                    <a href="enroll.html?course=Responsive Web Design" class="btn btn-primary w-100" aria-label="Enroll in Responsive Web Design course">Enroll Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Course Features -->
+    <section class="course-features py-5 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center mb-5">
+                    <h2 class="section-title">What Makes Our Courses Special</h2>
+                    <p class="section-subtitle">Experience learning like never before</p>
+                </div>
+            </div>
+            <div class="row g-4 justify-content-center">
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-laptop-code"></i>
+                        </div>
+                        <h4>Hands-on Projects</h4>
+                        <p>Build real-world projects that you can showcase in your portfolio.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-certificate"></i>
+                        </div>
+                        <h4>Industry Certificates</h4>
+                        <p>Earn certificates recognized by top companies in the industry.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-headset"></i>
+                        </div>
+                        <h4>24/7 Support</h4>
+                        <p>Get help whenever you need it with our round-the-clock support.</p>
+                    </div>
+                </div>
+                <!--<div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="400">
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-user-tie"></i>
+                        </div>
+                        <h4>Expert Instructors</h4>
+                        <p>Learn from industry professionals with years of practical experience.</p>
+                    </div>
+                </div>-->
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section py-5">
+        <div class="container">
+            <div class="row justify-content-center text-center">
+                <div class="col-lg-8">
+                    <h2 class="cta-title">Ready to Start Learning?</h2>
+                    <p class="cta-subtitle">Join thousands of students who have transformed their careers with our courses</p>
+                    <div class="cta-buttons">
+                        <a href="contact.html" class="btn btn-primary btn-lg me-3">Get Started Today</a>
+                        <a href="internships.html" class="btn btn-outline-primary btn-lg">Explore Internships</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="footer-brand">
+                        <a href="index.html" class="footer-logo">
+                            <i class="fas fa-code me-2"></i>
+                            TechInterns
+                        </a>
+                        <p class="footer-description">Empowering the next generation of tech leaders through innovative education and real-world experience.</p>
+                        <div class="social-links">
+                            <!--<a href="#" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="social-link" aria-label="Twitter"><i class="fab fa-twitter"></i></a>-->
+                            <a href="https://www.linkedin.com/company/techinterns-it-solution" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="https://www.instagram.com/techinterns_2025/" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h5 class="footer-title">Quick Links</h5>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="courses.html">Courses</a></li>
+                        <li><a href="internships.html">Internships</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h5 class="footer-title">Popular Courses</h5>
+                    <ul class="footer-links">
+                        <li><a href="courses.html">Full Stack Development</a></li>
+                        <li><a href="courses.html">Frontend Development</a></li>
+                        <li><a href="courses.html">Backend Development</a></li>
+                        <li><a href="courses.html">App Development</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h5 class="footer-title">Contact Info</h5>
+                    <div class="contact-info">
+                        <p><i class="fas fa-envelope me-2"></i>techinterns2025@gmail.com</p>
+                        <!--<p><i class="fas fa-phone me-2"></i>+1 (555) 123-4567</p>-->
+                        <p><i class="fas fa-map-marker-alt me-2"></i>Bengaluru, Karnataka, India</p>
+                    </div>
+                </div>
+            </div>
+            <hr class="footer-divider">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <p class="footer-copyright">&copy; 2024 TechInterns IT Solutions. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
