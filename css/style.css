@@ -53,6 +53,7 @@ h1, h2, h3, h4, h5, h6 {
 /* Navigation */
 .navbar {
     background: rgba(31, 41, 55, 0.95) !important;
+    -webkit-backdrop-filter: blur(20px);
     backdrop-filter: blur(20px);
     padding: 1rem 0;
     transition: var(--transition);
@@ -211,6 +212,7 @@ h1, h2, h3, h4, h5, h6 {
     width: 80px;
     height: 80px;
     background: rgba(255, 255, 255, 0.1);
+    -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
     border-radius: var(--border-radius);
     display: flex;
@@ -290,6 +292,7 @@ h1, h2, h3, h4, h5, h6 {
     border: 2px solid rgba(255, 255, 255, 0.4);
     color: white;
     background: transparent;
+    -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
 }
 
@@ -305,6 +308,7 @@ h1, h2, h3, h4, h5, h6 {
     border: 2px solid var(--primary-color);
     color: var(--primary-color);
     background: transparent;
+    -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
 }
 
@@ -358,6 +362,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .enrollment-card {
     background: rgba(255, 255, 255, 0.95);
+    -webkit-backdrop-filter: blur(20px);
     backdrop-filter: blur(20px);
     border-radius: var(--border-radius);
     padding: 3rem;
@@ -393,6 +398,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .feature-card {
     background: rgba(255, 255, 255, 0.9);
+    -webkit-backdrop-filter: blur(20px);
     backdrop-filter: blur(20px);
     padding: 3rem 2.5rem;
     border-radius: var(--border-radius);
@@ -468,6 +474,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .testimonial-card {
     background: rgba(255, 255, 255, 0.1);
+    -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
     border-radius: var(--border-radius);
     padding: 3rem;
@@ -526,6 +533,7 @@ h1, h2, h3, h4, h5, h6 {
     flex-wrap: wrap;
     padding: 1rem;
     background: rgba(255, 255, 255, 0.8);
+    -webkit-backdrop-filter: blur(20px);
     backdrop-filter: blur(20px);
     border-radius: var(--border-radius);
     box-shadow: var(--shadow-light);
@@ -864,6 +872,12 @@ h1, h2, h3, h4, h5, h6 {
     color: rgba(255, 255, 255, 0.7);
     text-align: center;
     margin-bottom: 0;
+}
+
+.admin-link {
+    color: rgba(255, 255, 255, 0.3);
+    text-decoration: none;
+    font-size: 0.8em;
 }
 
 /* Form Styles */
