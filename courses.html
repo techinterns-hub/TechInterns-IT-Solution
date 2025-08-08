@@ -268,7 +268,10 @@
             `).join('');
         }
         
-        document.addEventListener('DOMContentLoaded', loadCourses);
+        document.addEventListener('DOMContentLoaded', async function() {
+            await fetchData();
+            loadCourses();
+        });
     </script>
 </body>
 </html>

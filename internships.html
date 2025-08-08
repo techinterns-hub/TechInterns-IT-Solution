@@ -255,7 +255,10 @@
             `).join('');
         }
         
-        document.addEventListener('DOMContentLoaded', loadInternships);
+        document.addEventListener('DOMContentLoaded', async function() {
+            await fetchData();
+            loadInternships();
+        });
     </script>
 </body>
 </html>
