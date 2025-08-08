@@ -74,7 +74,7 @@ function showAddCourseModal() {
 }
 
 // Add new course
-async function addCourse() {
+function addCourse() {
     const form = document.getElementById('courseForm');
     if (!form.checkValidity()) {
         form.reportValidity();
@@ -92,7 +92,7 @@ async function addCourse() {
     };
     
     courses.push(newCourse);
-    await saveCoursesToAPI();
+    saveData();
     document.getElementById('totalCourses').textContent = courses.length;
     loadCourses();
     bootstrap.Modal.getInstance(document.getElementById('addCourseModal')).hide();
@@ -120,7 +120,7 @@ function editCourse(id) {
 }
 
 // Update course
-async function updateCourse(id) {
+function updateCourse(id) {
     const form = document.getElementById('courseForm');
     if (!form.checkValidity()) {
         form.reportValidity();
@@ -139,7 +139,7 @@ async function updateCourse(id) {
             price: document.getElementById('coursePrice').value
         };
         
-        await saveCoursesToAPI();
+        saveData();
         loadCourses();
         bootstrap.Modal.getInstance(document.getElementById('addCourseModal')).hide();
         showAlert('Course updated successfully!', 'success');
@@ -152,10 +152,10 @@ async function updateCourse(id) {
 }
 
 // Delete course
-async function deleteCourse(id) {
+function deleteCourse(id) {
     if (confirm('Are you sure you want to delete this course?')) {
         courses = courses.filter(c => c.id !== id);
-        await saveCoursesToAPI();
+        saveData();
         document.getElementById('totalCourses').textContent = courses.length;
         loadCourses();
         showAlert('Course deleted successfully!', 'success');
@@ -163,13 +163,13 @@ async function deleteCourse(id) {
 }
 
 // Edit pricing (simplified)
-async function editPricing(id) {
+function editPricing(id) {
     const plan = pricing.find(p => p.id === id);
     if (plan) {
         const newPrice = prompt('Enter new price:', plan.price);
         if (newPrice) {
             plan.price = newPrice;
-            await savePricingToAPI();
+            saveData();
             loadPricing();
             showAlert('Pricing updated successfully!', 'success');
         }
@@ -177,10 +177,10 @@ async function editPricing(id) {
 }
 
 // Delete pricing
-async function deletePricing(id) {
+function deletePricing(id) {
     if (confirm('Are you sure you want to delete this pricing plan?')) {
         pricing = pricing.filter(p => p.id !== id);
-        await savePricingToAPI();
+        saveData();
         loadPricing();
         showAlert('Pricing plan deleted successfully!', 'success');
     }
@@ -236,13 +236,13 @@ function loadInternships() {
 }
 
 // Edit internship
-async function editInternship(id) {
+function editInternship(id) {
     const internship = internships.find(i => i.id === id);
     if (internship) {
         const newSpots = prompt('Enter number of spots:', internship.spots);
         if (newSpots && !isNaN(newSpots)) {
             internship.spots = parseInt(newSpots);
-            await saveInternshipsToAPI();
+            saveData();
             loadInternships();
             showAlert('Internship updated successfully!', 'success');
         }
@@ -256,7 +256,7 @@ function showAddInternshipModal() {
 }
 
 // Add new internship
-async function addInternship() {
+function addInternship() {
     const form = document.getElementById('internshipForm');
     if (!form.checkValidity()) {
         form.reportValidity();
@@ -273,17 +273,17 @@ async function addInternship() {
     };
     
     internships.push(newInternship);
-    await saveInternshipsToAPI();
+    saveData();
     loadInternships();
     bootstrap.Modal.getInstance(document.getElementById('addInternshipModal')).hide();
     showAlert('Internship added successfully!', 'success');
 }
 
 // Delete internship
-async function deleteInternship(id) {
+function deleteInternship(id) {
     if (confirm('Are you sure you want to delete this internship?')) {
         internships = internships.filter(i => i.id !== id);
-        await saveInternshipsToAPI();
+        saveData();
         loadInternships();
         showAlert('Internship deleted successfully!', 'success');
     }
@@ -343,8 +343,7 @@ function updateDashboard() {
 }
 
 // Initialize admin panel
-document.addEventListener('DOMContentLoaded', async function() {
-    await fetchData();
+document.addEventListener('DOMContentLoaded', function() {
     loadEnrollments();
     loadCourses();
     loadPricing();
