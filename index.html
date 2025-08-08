@@ -376,6 +376,13 @@
             once: true
         });
     </script>
+    <script src="js/data.js"></script>
     <script src="js/script.js"></script>
+    <script>
+        // Load data on page load
+        document.addEventListener('DOMContentLoaded', async function() {
+            await fetchData();
+        });
+    </script>
 </body>
 </html>
