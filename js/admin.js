@@ -186,17 +186,18 @@ function deletePricing(id) {
     }
 }
 
-// Show alert
+// Show alert with sync notification
 function showAlert(message, type) {
     const alertDiv = document.createElement('div');
     alertDiv.className = `alert alert-${type} alert-dismissible fade show position-fixed`;
     alertDiv.style.cssText = 'top: 20px; right: 20px; z-index: 9999; min-width: 300px;';
     alertDiv.innerHTML = `
         ${message}
+        <small class="d-block mt-1 text-muted">Changes will sync across all devices</small>
         <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
     `;
     document.body.appendChild(alertDiv);
-    setTimeout(() => alertDiv.remove(), 3000);
+    setTimeout(() => alertDiv.remove(), 4000);
 }
 
 // Logout function

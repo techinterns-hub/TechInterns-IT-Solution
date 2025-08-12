@@ -194,6 +194,9 @@
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/sw-register.js"></script>
+    <script src="js/cache-buster.js"></script>
+    <script src="js/data-sync.js"></script>
     <script src="js/data.js"></script>
     <script src="js/script.js"></script>
     <script>
@@ -254,6 +257,11 @@
                 </div>
             `).join('');
         }
+        
+        // Auto-refresh internships when data updates
+        window.addEventListener('dataUpdated', () => {
+            loadInternships();
+        });
         
         document.addEventListener('DOMContentLoaded', loadInternships);
     </script>
