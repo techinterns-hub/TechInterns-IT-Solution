@@ -21,18 +21,9 @@ let internships = [
     { id: 4, title: 'Mobile App Development', duration: '1 months', type: 'Remote', spots: 10, description: 'Develop cross-platform mobile applications using React Native and Flutter, from concept to app store deployment.' }
 ];
 
-// Save data to localStorage and sync across devices
+// Save data to localStorage
 function saveData() {
-    const data = { courses, pricing, internships };
-    localStorage.setItem('techinternsData', JSON.stringify(data));
-    
-    // Trigger cross-device sync if available
-    if (window.dataSync) {
-        window.dataSync.saveToServer(data);
-    }
-    
-    // Update data.json file for persistence
-    updateDataFile(data);
+    localStorage.setItem('techinternsData', JSON.stringify({ courses, pricing, internships }));
 }
 
 // Load data from localStorage
@@ -45,35 +36,6 @@ function loadData() {
         internships = parsed.internships || internships;
     }
 }
-
-// Update data.json file (for admin updates)
-async function updateDataFile(data) {
-    try {
-        // In a real server environment, this would make an API call
-        // For now, we'll use localStorage with timestamp for sync
-        localStorage.setItem('dataFileUpdate', JSON.stringify({
-            data: data,
-            timestamp: Date.now()
-        }));
-        
-        // Notify other tabs/windows
-        window.dispatchEvent(new CustomEvent('dataFileUpdated', { detail: data }));
-    } catch (error) {
-        console.error('Failed to update data file:', error);
-    }
-}
-
-// Listen for data updates from other sources
-window.addEventListener('dataUpdated', (event) => {
-    courses = event.detail.courses || courses;
-    pricing = event.detail.pricing || pricing;
-    internships = event.detail.internships || internships;
-    
-    // Refresh UI if functions exist
-    if (typeof loadCourses === 'function') loadCourses();
-    if (typeof loadInternships === 'function') loadInternships();
-    if (typeof loadPricing === 'function') loadPricing();
-});
 
 // Initialize data
 loadData();
